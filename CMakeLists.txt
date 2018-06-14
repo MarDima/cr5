@@ -16,7 +16,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
 file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 
-add_executable(${NAME} main.cpp ${sources} ${headers})
+add_executable(${NAME} main.cpp ${sources} ${headers} src/ComandMan.cc include/ComandMan.hh)
 target_link_libraries(${NAME} ${Geant4_LIBRARIES})
 
 set(M_SCRIPTS
