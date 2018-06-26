@@ -11,15 +11,22 @@
 
 
 
+class ComandMan1;
 class EventAction;
 class StepAction : public G4UserSteppingAction{
     EventAction* event;
     G4String pName;
 public:
-//    void SetpName(G4String newValue);
+
+
+public:
+    StepAction();
+    void SetpName(G4String newValue);
     explicit StepAction(EventAction *event);
 
     void UserSteppingAction(const G4Step *step) override;
 
+private:
+    ComandMan1* comandMan1;
 };
 #endif //TEMPLATE_STEPACTION_HH
